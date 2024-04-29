@@ -1,0 +1,39 @@
+.welcome-banner{
+    margin: 40px 20px 15px 20px;
+    
+    height: 60px;
+    background-image: var(--blue-green-grad) ;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    border-radius: 3px;
+}
+.home-conatiner{
+    background-color: #edf2f6;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profileImg{
+    /* width: 5%; */
+    height: 60%;
+    margin: 0px 15px;
+}
+
+.welcome-banner h4{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.welcome-banner span{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.accordin-content{
+    margin:0px 20px
+}
