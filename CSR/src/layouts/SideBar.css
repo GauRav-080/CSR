@@ -1,0 +1,7 @@
+.sidebar{
+  width: var(--sidebar-width);
+  max-width: var(--sidebar-max-width);
+
+  background-color: var(--dark-blue);
+  color: white;
+}

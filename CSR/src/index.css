@@ -1,9 +1,9 @@
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Roboto;
+	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 400;
 
-	color-scheme: light dark;
 	background-color: white;
 
 	font-synthesis: none;
@@ -17,13 +17,29 @@
 	--darker-blue: #1d4c9e;
 	--bg-gray: #edf2f6;
 	--blue-green-grad: linear-gradient(90deg, var(--blue) 0%, var(--green) 100%);
+	--heading-black: #212121;
+	--text-gray: #707070;
+	--bot-border: 1px solid lightgrey;
+
+	--cont-side-pad: 25px;
+	--header-height: 50px;
+	--sidebar-width: 28vh;
+	--sidebar-max-width: 240px;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	display: block;
-	box-sizing: border-box;
+}
+
+#root {
+	height: 100vh;
+	width: 100%;
 }
