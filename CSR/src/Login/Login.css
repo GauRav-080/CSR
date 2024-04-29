@@ -1,0 +1,98 @@
+ /* LoginPage.css */
+
+.login-page {
+  background-image: url("../assets/images/login-background.png"); /* Path to your background image */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.left-side {
+  flex: 1;
+  width: 50%;
+   
+}
+.left-side p {
+  flex: 1;
+  padding: 20px;
+  font-size: 53px;
+  color: white;
+  font-weight: 100;
+}
+.left-side h2 {
+  flex: 1;
+  padding: 20px;
+  font-size: 62px;
+  color: white;
+  font-weight: 500;
+}
+
+.right-side {
+  flex: 1;
+  width: 50%;
+}
+.sign-in{
+  flex: 1;
+  padding: 20px;
+  background-color:white;
+  height: 100vh;
+  margin-right: 25%; 
+}
+.empty-div{
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.img-logo{
+width: 46%;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.input-handle{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
