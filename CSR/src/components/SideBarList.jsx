@@ -7,6 +7,7 @@ import {
 	ListItemIcon,
 	ListItemText,
 } from "@mui/material";
+import HubIcon from '@mui/icons-material/Hub';
 import {
 	AssignmentOutlined,
 	BuildOutlined,
@@ -39,7 +40,7 @@ const sideList = [
 	},
 	{
 		name: "Distributions",
-		icon: <HomeOutlinedIcon />,
+		icon: <HubIcon />,
 	},
 	{
 		name: "Transactions",
@@ -56,7 +57,7 @@ const sideList = [
 ];
 
 const SideBarList = () => {
-	return sideList.map((item) => (
+	return sideList.map((item, index) => (
 		<>
 			<ListItemButton>
 				<ListItemIcon>{item.icon}</ListItemIcon>

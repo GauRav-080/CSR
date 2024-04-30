@@ -13,6 +13,7 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 .profileImg{
@@ -37,3 +38,14 @@
 .accordin-content{
     margin:0px 20px
 }
+.accordin-container{
+    margin-bottom: 12px;
+}
+
+.MuiAccordionSummary-content{
+    justify-content: space-between;
+    font-size:16px ;
+    font-weight: bold;
+    color: #212121;
+}
+

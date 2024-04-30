@@ -6,8 +6,53 @@ import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Button from '@mui/material/Button';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {
+	AssignmentOutlined,
+	BuildOutlined,
+	CategoryOutlined,
+	DescriptionOutlined,
+	ManageAccountsOutlined,
+	NotificationsOutlined,
+	ReceiptLongOutlined,
+    
+} from "@mui/icons-material";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+ import HubIcon from '@mui/icons-material/Hub';
 
+const homeDetails = [
+    {
+        name: "Notification",
+        icon: <NotificationsOutlined />,
 
+    },
+    {
+        name: "Order",
+        icon: <AssignmentOutlined />,
+    },
+    {
+        name: "Service Management",
+        icon: <ManageAccountsOutlined />,
+    },
+    {
+        name: "Products",
+        icon: <CategoryOutlined />,
+    },{
+        name: "Distributions",
+        icon: <HubIcon />,
+    },
+    {
+        name: "Transactions",
+        icon: <ReceiptLongOutlined />,
+    },{
+        name: "SDS",
+        icon: <DescriptionOutlined />,
+    },
+    {
+        name: "Admin Tools",
+        icon: <BuildOutlined />,
+    },
+]
 const Home = () => {
     return (
         <div className='home-conatiner'>
@@ -25,110 +70,25 @@ const Home = () => {
 
             </div>
             <div className='accordin-content'>
-                <Accordion>
-                    <AccordionSummary
-                        //expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                    >
-                        Notifications
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-
-
-
-                <Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Orders
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Service Management
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion><Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Products
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Distributions
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Transactions
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion> <Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        SDS
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion> <Accordion>
-                    <AccordionSummary
-                        // expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Admin Tools
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
+                {homeDetails.map((item) => {
+                    return(<><Accordion className='accordin-container'>
+                        <AccordionSummary className='sss'
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1-content"
+                            id="panel1-header"
+                        >
+                            {item.name}
+                            {item.icon}
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            malesuada lacus ex, sit amet blandit leo lobortis eget.
+                        </AccordionDetails>
+                    </Accordion>
+                    </>)
+                    
+                })}
+                
             </div>
 
         </div>
