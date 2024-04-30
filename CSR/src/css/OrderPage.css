@@ -92,11 +92,20 @@ input.search {
 }
 
 
-.MuiTableHead-root{
-    background-color: #e4e9ed;
-  
-}
+
 
 .MuiTableCell-root{
-    color:rgb(196, 119, 19)  ;
+    background-color: #ffffff;
+    color: #707070;
+    font-size: 14;
+    font-weight: bold;
+    border-left: 0px solid #edf2f6;
+    border-right: 2px solid #edf2f6;
+    border-top: 8px solid #edf2f6;
+    border-bottom: 2px solid #edf2f6;
+}
+
+.MuiTableHead-root .MuiTableCell-root{
+    background-color: #e4e9ed;
+  
 }
