@@ -3,6 +3,8 @@ import "./App.css";
 import { ROUTES } from "./constants/Constants";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
+import OrderPage from "./pages/OrderPage";
+import Home from './pages/Home';
 
 function App() {
 	const [page, setPage] = useState(ROUTES.home);
@@ -14,7 +16,12 @@ function App() {
 				<Header />
 				<div className="content">
 					<SideBar />
-					<div className="page-content"></div>
+					<div className="page-content">
+						<OrderPage />
+						{/* <Home /> */}
+
+					</div>
+
 				</div>
 			</>
 		);

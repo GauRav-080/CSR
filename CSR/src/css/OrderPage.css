@@ -1,0 +1,102 @@
+.conatiner{
+    background-color: #edf2f6;
+    height: 100%;
+    overflow: auto;
+}
+
+.input-section{
+    background-color: rgb(255, 255, 255);
+   
+    margin: 20px 10px 25px 15px;
+    padding: 15px 10px 15px 20px;
+    border: 1px solid #eaeaea;
+    
+}
+
+
+.page-detail{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+.page-detail h3{
+    color: #23aaea;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 13px;
+
+}
+.date-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 20px 0px 30px 14px;
+   
+}
+
+.date-picker{
+    margin-right: 30px;
+}
+
+.lower-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.select-container{
+    display: flex;
+    flex-direction: column;
+    width:-webkit-fill-available;
+    
+}
+
+.horizontal-line{
+    margin: 15px;
+    border: 1px solid rgb(218, 218, 218)
+}
+
+.search-panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+label{
+    color: #212121;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 9px;
+}
+
+.select-dropDown{
+    width: 100%;
+}
+
+
+
+input.search {
+    width: 220px;
+    border: 1px solid #555;
+    display: block;
+    padding: 9px 4px 9px 40px;
+    background-color: rgb(252, 252, 252);
+    background:  url("../assets/images/Search.png") no-repeat 4px;
+}
+
+
+.date-input{
+    border: none;
+    background-color: red;
+}
+
+
+.MuiTableHead-root{
+    background-color: #e4e9ed;
+  
+}
+
+.MuiTableCell-root{
+    color:rgb(196, 119, 19)  ;
+}
