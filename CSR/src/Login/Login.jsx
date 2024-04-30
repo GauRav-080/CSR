@@ -16,12 +16,12 @@ const Login = () => {
     console.log('Email:', email);
     console.log('Password:', password);
   };
-
+   
   return (
     <div className="login-page">
       <div className="left-side">
-          <p>SHERIDAN GLOBAL GATEWAY SYSTEM- </p>
-           <h2>CSR INTERFACE</h2>
+          <h2>SHERIDAN GLOBAL GATEWAY SYSTEM -</h2>
+           <p>CSR INTERFACE</p>
         </div>
        
         
@@ -29,9 +29,11 @@ const Login = () => {
           <div className="sign-in" >
           <div className="logo">
           <img className='img-logo' src={logo} />
-          <h2>Sign-in</h2>
+          <h2>Sign In</h2>
           </div>
+          
           <div className='input-handle'>
+          
              <form onSubmit={handleSubmit}>
             <div className="form-group">
            
@@ -57,9 +59,11 @@ const Login = () => {
                   </InputAdornment>
                }
             />
-               
+             
             </div>
             <button type="submit">Sign In</button>
+            <br></br>
+            <br></br>
             <a href="#"   className="submit">Forgot Password?</a>
           </form>
           </div>
