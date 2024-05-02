@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -12,6 +12,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { Table, TableContainer, TableHead, TableRow, TableCell, TableBody, TextField, TablePagination } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import Autocomplete from '@mui/material/Autocomplete';
+import DataTable from './DataTable';
 const rows = [
     { id: 1, dateAdded: '4/25/2023', order: '1156836', publisher: 'UAT-TNQ Jmis', customerPO: '981295', method: 'POD', status: 'In Process' },
     { id: 2, dateAdded: '3/07/2023', order: '1156837', publisher: 'PROD TEST A1', customerPO: '678773', method: 'POD', status: 'In Process' },
@@ -27,21 +28,23 @@ const top100Films = [
     { label: 'The Shawshank Redemption', year: 1994 },
     { label: 'The Godfather', year: 1972 },
     { label: 'The Godfather: Part II', year: 1974 },
-    { label: 'The Dark Knight', year: 2008 },
-    { label: '12 Angry Men', year: 1957 },
-    { label: "Schindler's List", year: 1993 },
-    { label: 'Pulp Fiction', year: 1994 },
-    {
-        label: 'The Lord of the Rings: The Return of the King',
-        year: 2003,
-    },
-    { label: 'The Good, the Bad and the Ugly', year: 1966 },
-    { label: 'Fight Club', year: 1999 },
-    {
-        label: 'The Lord of the Rings: The Fellowship of the Ring',
-        year: 2001,
-    },]
+]
+
+
 const OrderPage = () => {
+    const [data, setData] = useState({});
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const data = await fetch('https://dummyjson.com/products/')
+            .then(res => res.json())
+            .then(json => setData(json))
+
+
+    }
+    console.log(data)
     const formSchema = {
         selectType: "",
         selectGate: "",
@@ -69,7 +72,7 @@ const OrderPage = () => {
     // Initialize the formData state using the form schema
     const [formData, setFormData] = useState(formSchema);
 
-    console.log(formData);
+    //console.log(formData);
 
     const [selectedDate, setSelectedDate] = useState(null);
 
@@ -123,12 +126,13 @@ const OrderPage = () => {
                     </div>
                     <div className='date-picker'>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker variant="filled" slotProps={{
-                                textField: {
-                                    helperText: 'MM/DD/YYYY',
-                                    placeholder: "Choose Date"
-                                },
-                            }} />
+                            <DatePicker variant="filled"
+                                slotProps={{
+                                    textField: {
+                                        helperText: 'MM/DD/YYYY',
+                                        placeholder: "Choose Date"
+                                    },
+                                }} />
                         </LocalizationProvider>
                     </div>
 
@@ -137,50 +141,50 @@ const OrderPage = () => {
                 <div className='lower-input'>
                     <div className='select-container'>
                         <label>Select Type:</label>
-                       
+
                         <Autocomplete
                             id="combo-box-demo"
                             options={top100Films}
                             sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} label="Select"/>}
+                            renderInput={(params) => <TextField {...params} />}
                         />
                     </div> <div className='select-container'>
                         <label>Select Gate:</label>
-                      
+
                         <Autocomplete
                             id="combo-box-demo"
                             options={top100Films}
                             sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} label="Select" />} />
+                            renderInput={(params) => <TextField {...params} />} />
 
                     </div>
                     <div className='select-container'>
                         <label>Select Publisher:</label>
-                      
+
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
                             options={top100Films}
                             sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} label="Select" />} />
+                            renderInput={(params) => <TextField {...params} />} />
                     </div> <div className='select-container'>
                         <label>Select Submission Type:</label>
-                       
+
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
                             options={top100Films}
                             sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} label="Select" />} />
+                            renderInput={(params) => <TextField {...params} />} />
                     </div> <div className='select-container'>
                         <label>Select Production Type:</label>
-                        
+
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
                             options={top100Films}
                             sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params}  />} />
+                            renderInput={(params) => <TextField {...params} />} />
                     </div>
 
 
@@ -197,7 +201,7 @@ const OrderPage = () => {
                     <Button variant="contained">Search</Button>
 
                 </div> */}
-                <div>
+                {/* <div>
                     <div>
 
                     </div>
@@ -248,9 +252,9 @@ const OrderPage = () => {
                         onPageChange={handleChangePage}
                         onRowsPerPageChange={handleChangeRowsPerPage}
                     />
-                </div>
-
+                </div> */}
             </div>
+            <DataTable />
         </div>
     )
 }
