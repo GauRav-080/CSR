@@ -8,7 +8,7 @@
     background-color: rgb(255, 255, 255);
    
     margin: 20px 10px 25px 15px;
-    padding: 15px 10px 15px 20px;
+    padding: 15px 10px 15px 10px;
     border: 1px solid #eaeaea;
     
 }
@@ -30,12 +30,12 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin: 20px 0px 30px 14px;
+    margin: 20px 0px 30px 9px;
    
 }
 
 .date-picker{
-    margin-right: 30px;
+    margin-right: 16px;
 }
 
 .lower-input{

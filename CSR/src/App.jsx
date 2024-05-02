@@ -6,10 +6,11 @@ import SideBar from "./layouts/SideBar";
 import OrderPage from "./pages/OrderPage";
 import Home from './pages/Home';
 import Login from "./Login/Login";
+import DataTable from "./pages/DataTable";
 
 function App() {
 	const [page, setPage] = useState(ROUTES.home);
-	const [loggedIn, setLoggedIn] = useState(false);
+	const [loggedIn, setLoggedIn] = useState(true);
 
 	if (loggedIn) {
 		return (
@@ -20,6 +21,7 @@ function App() {
 					<div className="page-content">
 						<OrderPage />
 						{/* <Home /> */}
+						<DataTable />
 
 					</div>
 
@@ -27,7 +29,7 @@ function App() {
 			</>
 		);
 	} else {
-		return <Login/>;
+		return <Login />;
 	}
 }
 
