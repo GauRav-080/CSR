@@ -92,7 +92,7 @@ const Login = () => {
         
              
             </div>
-            <button type="submit">Sign In</button>
+            <button className='btn-submit' type="submit">Sign In</button>
             <br></br>
             <br></br>
             <a href="#"   className="submit">Forgot Password?</a>
