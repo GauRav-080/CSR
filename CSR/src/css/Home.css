@@ -49,3 +49,7 @@
     color: #212121;
 }
 
+.MuiAccordionSummary-content.Mui-expanded{
+    margin-bottom:3px;
+    border-bottom: 1px solid #d3d3d3;
+}
