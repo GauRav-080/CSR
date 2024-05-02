@@ -10,7 +10,11 @@ import DataTable from "./pages/DataTable";
 
 function App() {
 	const [page, setPage] = useState(ROUTES.home);
-	const [loggedIn, setLoggedIn] = useState(true);
+	const [loggedIn, setLoggedIn] = useState(false);
+	const handleLogin = () => {
+		// Perform login logic, and if successful, set loggedIn to true
+		setLoggedIn(true);
+	  };
 
 	if (loggedIn) {
 		return (
@@ -29,7 +33,7 @@ function App() {
 			</>
 		);
 	} else {
-		return <Login />;
+		return <Login onLogin={handleLogin}/>;
 	}
 }
 

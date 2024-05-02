@@ -13,55 +13,62 @@ import FormHelperText from '@mui/material/FormHelperText';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-const Login = () => {
+
+const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+   
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here, e.g., validation, API call, etc.
     console.log('Email:', email);
     console.log('Password:', password);
+    onLogin();
   };
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  
+
   return (
     <div className="login-page">
       <div className="left-side">
-          <h2>SHERIDAN GLOBAL GATEWAY SYSTEM -</h2>
-           <p>CSR INTERFACE</p>
-        </div>
-       
-        
-        <div className="right-side" >
-          <div className="sign-in" >
+        <h2>SHERIDAN GLOBAL GATEWAY SYSTEM -</h2>
+        <p>CSR INTERFACE</p>
+      </div>
+
+
+      <div className="right-side" >
+        <div className="sign-in" >
           <div className="logo">
-          <img className='img-logo' src={logo} />
-          <h2>Sign In</h2>
+            <img className='img-logo' src={logo} />
+            <h2>Sign In</h2>
           </div>
-          
+
           <div className='input-handle'>
-          
-             <form onSubmit={handleSubmit}>
-            <div className="form-group">
-           
-            <Input
-               id="prefix-adornment"
-               placeholder="Enter your email*"
-               endAdornment={
-                  <InputAdornment position="end">
-                     <MailIcon  />
-                  </InputAdornment>
-               }
-            />
-             
-            </div>
-            <div className="form-group">
-               
-            {/* <Input
+
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+
+                <Input
+                  id="prefix-adornment"
+                  placeholder="Enter your Email"
+                  endAdornment={
+
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="mail "
+                        edge="end">
+                        <MailIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+
+              </div>
+              <div className="form-group">
+
+                {/* <Input
                id="prefix-adornment"
                placeholder="Enter your password"
                endAdornment={
@@ -70,42 +77,42 @@ const Login = () => {
                   </InputAdornment>
                }
             /> */}
-           
-          <Input
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            placeholder="Enter your password"
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  // onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-          />
-        
-             
-            </div>
-            <button className='btn-submit' type="submit">Sign In</button>
-            <br></br>
-            <br></br>
-            <a href="#"   className="submit">Forgot Password?</a>
-          </form>
-          </div>
-         
-          </div>
-          <div className="empty-div">
 
+                <Input
+                  id="outlined-adornment-password"
+                  type={showPassword ? 'text' : 'password'}
+                  placeholder="Enter your password"
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        // onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+
+
+              </div>
+              <button className='btn-submit' onClick={handleSubmit} type="submit">Sign In</button>
+              <br></br>
+              <br></br>
+              <a href="#" className="submit">Forgot Password?</a>
+            </form>
           </div>
+
+        </div>
+        <div className="empty-div">
+
         </div>
       </div>
-       
+    </div>
+
   );
 };
 
