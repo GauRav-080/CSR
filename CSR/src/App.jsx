@@ -5,10 +5,11 @@ import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import OrderPage from "./pages/OrderPage";
 import Home from './pages/Home';
+import Login from "./Login/Login";
 
 function App() {
 	const [page, setPage] = useState(ROUTES.home);
-	const [loggedIn, setLoggedIn] = useState(true);
+	const [loggedIn, setLoggedIn] = useState(false);
 
 	if (loggedIn) {
 		return (
@@ -26,7 +27,7 @@ function App() {
 			</>
 		);
 	} else {
-		return <>Login</>;
+		return <Login/>;
 	}
 }
 

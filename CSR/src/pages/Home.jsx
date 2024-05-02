@@ -15,11 +15,15 @@ import {
 	ManageAccountsOutlined,
 	NotificationsOutlined,
 	ReceiptLongOutlined,
+     
     
 } from "@mui/icons-material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
  import HubIcon from '@mui/icons-material/Hub';
-
+ 
+ import CloseIcon from '@mui/icons-material/Close';
+ import MailIcon from '@mui/icons-material/Mail';
+ import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
 const homeDetails = [
     {
         name: "Notification",
@@ -53,6 +57,16 @@ const homeDetails = [
         icon: <BuildOutlined />,
     },
 ]
+const ParagraphWithIcon = ({ icon, text }) => {
+    const classes = useStyles();
+  
+    return (
+      <Typography variant="body1" className={classes.paragraph}>
+        <Icon className={classes.icon}>{icon}</Icon>
+        {text}
+      </Typography>
+    );
+  };
 const Home = () => {
     return (
         <div className='home-conatiner'>
@@ -80,10 +94,15 @@ const Home = () => {
                             {item.name}
                             {item.icon}
                         </AccordionSummary>
-                        <AccordionDetails>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget.
+                        <AccordionDetails className ="cd">
+                        <MailIcon/>
+                        There is Order Message <br></br>
+                        <CloseIcon/>
+                        There is failed Distributions message <br></br>
+                        <EmojiFlagsIcon/>
+                        There is flagged Signal.  
                         </AccordionDetails>
+                         
                     </Accordion>
                     </>)
                     
