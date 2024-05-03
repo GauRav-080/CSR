@@ -26,10 +26,12 @@ import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import { ROUTES } from "../constants/Constants";
 const sideList = [
 	{
 		name: "Home",
 		icon: <HomeOutlinedIcon />,
+		page: ROUTES.home,
 	},
 	{
 		name: "Notifications",
@@ -65,11 +67,14 @@ const sideList = [
 		icon: <BuildOutlined />,
 	},
 ];
-const SubList = ({ open }) => {
+const SubList = ({ open, setPage }) => {
+	const handleClick = (page = '') => {
+		setPage(page);
+	};
 	return (
 		<Collapse in={open} timeout="auto" unmountOnExit>
 			<List component="div" disablePadding>
-				<ListItemButton sx={{ pl: 4 }}>
+				<ListItemButton sx={{ pl: 4 }} onClick={(e) => handleClick(ROUTES.recentOrders)}>
 					<ListItemText primary="Recent Orders" />
 				</ListItemButton>
 				<ListItemButton sx={{ pl: 4 }}>
@@ -92,21 +97,21 @@ const SubList = ({ open }) => {
 		</Collapse>
 	);
 }
-const SideBarList = () => {
+const SideBarList = ({ setPage }) => {
 	const [open, setOpen] = React.useState(true);
 
-	const handleClick = () => {
-		setOpen(!open);
+	const handleClick = (page = '') => {
+		setPage(page);
 	};
 	return sideList.map((item, index) => (
 		<>
-			<ListItemButton onClick={handleClick}>
+			<ListItemButton onClick={(e) => handleClick(item.page)}>
 				<ListItemIcon>{item.icon}</ListItemIcon>
 				<ListItemText primary={item.name} />
 				{item.subList && (open && item.subList ? <ExpandLess /> : <ExpandMore />)}
 
 			</ListItemButton>
-			{item.subList && <SubList open={open} />}
+			{item.subList && <SubList open={open} setPage={setPage} />}
 		</>
 	));
 };

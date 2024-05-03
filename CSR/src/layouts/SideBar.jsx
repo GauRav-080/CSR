@@ -9,11 +9,11 @@ import {
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import SideBarList from "../components/SideBarList";
 
-const SideBar = () => {
+const SideBar = ({setPage}) => {
 	return (
 		<div className="sidebar">
 			<List component="nav">
-				<SideBarList />
+				<SideBarList setPage={setPage} />
 			</List>
 		</div>
 	);

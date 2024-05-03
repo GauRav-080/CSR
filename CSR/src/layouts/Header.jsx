@@ -3,7 +3,10 @@ import "./Header.css";
 import { HeaderTitle } from "../constants/Constants";
 import { Avatar } from "@mui/material";
 
-const Header = () => {
+const Header = ({ setLoggedIn }) => {
+	const handleClick = () => {
+		setLoggedIn(false);
+	};
 	return (
 		<header className="header">
 			<div className="header-logo"></div>
@@ -13,7 +16,7 @@ const Header = () => {
 					<Avatar className="user-avatar">UN</Avatar>
 					<h5 className="user-name">User Name</h5>
 				</div>
-				|<button className="sign-out">Sign Out</button>
+				|<button className="sign-out" onClick={handleClick}>Sign Out</button>
 			</div>
 		</header>
 	);
