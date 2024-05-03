@@ -73,7 +73,7 @@ const SubList = ({ open, setPage }) => {
 	};
 	return (
 		<Collapse in={open} timeout="auto" unmountOnExit>
-			<List component="div" disablePadding>
+			<List className="sub-list" component="div" disablePadding>
 				<ListItemButton sx={{ pl: 4 }} onClick={(e) => handleClick(ROUTES.recentOrders)}>
 					<ListItemText primary="Recent Orders" />
 				</ListItemButton>
