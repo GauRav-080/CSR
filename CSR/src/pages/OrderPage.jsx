@@ -13,6 +13,8 @@ import { Table, TableContainer, TableHead, TableRow, TableCell, TableBody, TextF
 import InputAdornment from '@mui/material/InputAdornment';
 import Autocomplete from '@mui/material/Autocomplete';
 import DataTable from './DataTable';
+import DatePickers from '../components/DatePickers';
+import AutoCompleteC from '../components/AutoCompleteC';
 const rows = [
     { id: 1, dateAdded: '4/25/2023', order: '1156836', publisher: 'UAT-TNQ Jmis', customerPO: '981295', method: 'POD', status: 'In Process' },
     { id: 2, dateAdded: '3/07/2023', order: '1156837', publisher: 'PROD TEST A1', customerPO: '678773', method: 'POD', status: 'In Process' },
@@ -25,9 +27,14 @@ const rows = [
 ];
 
 const top100Films = [
-    { label: 'The Shawshank Redemption', year: 1994 },
-    { label: 'The Godfather', year: 1972 },
-    { label: 'The Godfather: Part II', year: 1974 },
+    { label: 'Jaico Publishing House', year: 1994 },
+    { label: ' Westland Publications', year: 1972 },
+    { label: 'Roli Books', year: 1974 },
+    { label: 'Hachette India', year: 1994 },
+    { label: 'Aleph Book Company', year: 1972 },
+    { label: 'Scholastic India', year: 1974 },
+    { label: 'Tata MacgrawHill', year: 1994 },
+    { label: 'Peerson India', year: 1972 },
 ]
 
 
@@ -91,49 +98,17 @@ const OrderPage = () => {
             </div>
             <div className='input-section'>
                 <div className='date-section'>
-                    <div className='date-picker'>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker variant="filled"
 
-                                sx={{
-                                    '.MuiPickersToolbar-root': {
-                                        color: '#1565c0',
-                                        borderRadius: '2px',
-                                        borderWidth: '1px',
-                                        borderColor: '#2196f3',
-                                        border: '1px solid',
-                                        backgroundColor: "red",
-                                    }
-                                }}
-                                //  className='date-input'
-                                slotProps={{
-                                    textField: {
-                                        helperText: 'MM/DD/YYYY',
-                                        placeholder: "Choose Date"
-                                    },
-                                }} />
-                        </LocalizationProvider>
+                    <div className='date-picker'>
+                        <DatePickers />
+
                     </div>
                     <div className='date-picker'>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker variant="filled" slotProps={{
-                                textField: {
-                                    helperText: 'MM/DD/YYYY',
-                                    placeholder: "Choose Date"
-                                },
-                            }} />
-                        </LocalizationProvider>
-                    </div>
-                    <div className='date-picker'>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker variant="filled"
-                                slotProps={{
-                                    textField: {
-                                        helperText: 'MM/DD/YYYY',
-                                        placeholder: "Choose Date"
-                                    },
-                                }} />
-                        </LocalizationProvider>
+                        <DatePickers />
+
+                    </div><div className='date-picker'>
+                        <DatePickers />
+
                     </div>
 
                 </div>
@@ -141,118 +116,44 @@ const OrderPage = () => {
                 <div className='lower-input'>
                     <div className='select-container'>
                         <label>Select Type:</label>
-
-                        <Autocomplete
-                            id="combo-box-demo"
+                        <AutoCompleteC
                             options={top100Films}
-                            sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} />}
                         />
-                    </div> <div className='select-container'>
+                    </div>
+                    <div className='select-container'>
                         <label>Select Gate:</label>
-
-                        <Autocomplete
-                            id="combo-box-demo"
+                        <AutoCompleteC
                             options={top100Films}
-                            sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} />} />
+                        />
 
                     </div>
                     <div className='select-container'>
                         <label>Select Publisher:</label>
 
-                        <Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
+                        <AutoCompleteC
                             options={top100Films}
-                            sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} />} />
-                    </div> <div className='select-container'>
+                        />
+                    </div>
+                    <div className='select-container'>
                         <label>Select Submission Type:</label>
 
-                        <Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
+                        <AutoCompleteC
                             options={top100Films}
-                            sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} />} />
-                    </div> <div className='select-container'>
+                        />
+                    </div>
+                    <div className='select-container'>
                         <label>Select Production Type:</label>
 
-                        <Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
+                        <AutoCompleteC
                             options={top100Films}
-                            sx={{ m: 1, minWidth: 190 }}
-                            renderInput={(params) => <TextField {...params} />} />
+                        />
                     </div>
-
-
                 </div>
 
             </div>
             <hr className='horizontal-line'></hr>
             <div>
-                {/* <div className='search-panel'>
-                    <span className='input-icon'>
-                        <input type='text' className="search" />
-                    </span>
 
-                    <Button variant="contained">Search</Button>
-
-                </div> */}
-                {/* <div>
-                    <div>
-
-                    </div>
-                    <TextField
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        style={{ margin: '1.5rem', display: "flex", flexDirection: "row", justifyContent: "flex-end" }}
-                        InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
-                                    <SearchIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
-                    <TableContainer>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Date Added</TableCell>
-                                    <TableCell>Order</TableCell>
-                                    <TableCell>Publisher</TableCell>
-                                    <TableCell>Customer PO</TableCell>
-                                    <TableCell>Method</TableCell>
-                                    <TableCell>Status</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
-                                    <TableRow key={row.id}>
-                                        <TableCell>{row.dateAdded}</TableCell>
-                                        <TableCell>{row.order}</TableCell>
-                                        <TableCell>{row.publisher}</TableCell>
-                                        <TableCell>{row.customerPO}</TableCell>
-                                        <TableCell>{row.method}</TableCell>
-                                        <TableCell>{row.status}</TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                    <TablePagination
-                        rowsPerPageOptions={[5, 10, 25]}
-                        component="div"
-                        count={filteredRows.length}
-                        rowsPerPage={rowsPerPage}
-                        page={page}
-                        onPageChange={handleChangePage}
-                        onRowsPerPageChange={handleChangeRowsPerPage}
-                    />
-                </div> */}
             </div>
             <DataTable />
         </div>
