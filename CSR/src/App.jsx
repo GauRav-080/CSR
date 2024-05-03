@@ -5,7 +5,7 @@ import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import OrderPage from "./pages/OrderPage";
 import Home from './pages/Home';
-import Login from "./Login/Login";
+import Login from "./Login/Login.jsx";
 import DataTable from "./pages/DataTable";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 					<div className="page-content">
 						<OrderPage />
 						{/* <Home /> */}
-						<DataTable />
+						{/* <DataTable /> */}
 
 					</div>
 

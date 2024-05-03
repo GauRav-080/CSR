@@ -17,6 +17,15 @@ import {
 	NotificationsOutlined,
 	ReceiptLongOutlined,
 } from "@mui/icons-material";
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
+import Collapse from '@mui/material/Collapse';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import SendIcon from '@mui/icons-material/Send';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
 const sideList = [
 	{
 		name: "Home",
@@ -29,6 +38,7 @@ const sideList = [
 	{
 		name: "Orders",
 		icon: <AssignmentOutlined />,
+		subList: true,
 	},
 	{
 		name: "Service Management",
@@ -55,14 +65,48 @@ const sideList = [
 		icon: <BuildOutlined />,
 	},
 ];
+const SubList = ({ open }) => {
+	return (
+		<Collapse in={open} timeout="auto" unmountOnExit>
+			<List component="div" disablePadding>
+				<ListItemButton sx={{ pl: 4 }}>
+					<ListItemText primary="Recent Orders" />
+				</ListItemButton>
+				<ListItemButton sx={{ pl: 4 }}>
 
+					<ListItemText primary="On Waits Orders" />
+				</ListItemButton>
+				<ListItemButton sx={{ pl: 4 }}>
+
+					<ListItemText primary="Failed Orders" />
+				</ListItemButton>
+				<ListItemButton sx={{ pl: 4 }}>
+
+					<ListItemText primary="In Process Orders" />
+				</ListItemButton>
+				<ListItemButton sx={{ pl: 4 }}>
+
+					<ListItemText primary="Search Orders" />
+				</ListItemButton>
+			</List>
+		</Collapse>
+	);
+}
 const SideBarList = () => {
+	const [open, setOpen] = React.useState(true);
+
+	const handleClick = () => {
+		setOpen(!open);
+	};
 	return sideList.map((item, index) => (
 		<>
-			<ListItemButton>
+			<ListItemButton onClick={handleClick}>
 				<ListItemIcon>{item.icon}</ListItemIcon>
 				<ListItemText primary={item.name} />
+				{item.subList && (open && item.subList ? <ExpandLess /> : <ExpandMore />)}
+
 			</ListItemButton>
+			{item.subList && <SubList open={open} />}
 		</>
 	));
 };
