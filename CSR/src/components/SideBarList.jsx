@@ -98,14 +98,18 @@ const SubList = ({ open, setPage }) => {
 	);
 }
 const SideBarList = ({ setPage }) => {
-	const [open, setOpen] = React.useState(true);
+	const [open, setOpen] = React.useState(false);
 
 	const handleClick = (page = '') => {
 		setPage(page);
 	};
+
+	const handleDropdown = () => {
+		setOpen(!open);
+	}
 	return sideList.map((item, index) => (
 		<>
-			<ListItemButton onClick={(e) => handleClick(item.page)}>
+			<ListItemButton onClick={item.subList ? handleDropdown : ((e) => handleClick(item.page))}>
 				<ListItemIcon>{item.icon}</ListItemIcon>
 				<ListItemText primary={item.name} />
 				{item.subList && (open && item.subList ? <ExpandLess /> : <ExpandMore />)}
