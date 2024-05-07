@@ -19,10 +19,7 @@ const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
    
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here, e.g., validation, API call, etc.
-    console.log('Email:', email);
-    console.log('Password:', password);
+    
     onLogin();
   };
   const [showPassword, setShowPassword] = React.useState(false);
@@ -51,6 +48,7 @@ const Login = ({ onLogin }) => {
               <div className="form-group">
 
                 <Input
+                sx={{width:'300px'}}
                   id="prefix-adornment"
                   placeholder="Enter your Email"
                   endAdornment={
@@ -79,6 +77,7 @@ const Login = ({ onLogin }) => {
             /> */}
 
                 <Input
+                sx={{width:'300px'}}
                   id="outlined-adornment-password"
                   type={showPassword ? 'text' : 'password'}
                   placeholder="Enter your password"

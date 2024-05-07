@@ -1,7 +1,8 @@
 .sidebar{
   width: var(--sidebar-width);
   width: var(--sidebar-max-width);
-
+  height: 100%;
+  overflow-y: auto;
   background-color: var(--dark-blue);
   color: white;
 }
