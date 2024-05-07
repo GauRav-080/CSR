@@ -27,7 +27,6 @@
   flex-direction: column;
 }
 .left-side h2 {
-  flex: 1;
   padding: 0px 20px 0px 20px; 
   font-size: 53px;
    
@@ -36,8 +35,7 @@
   margin-bottom: 0;
 }
 .left-side p {
-  flex: 1;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   font-size: 62px;
   color: white;
   font-weight: 500;
@@ -66,8 +64,8 @@
   
 }
 .img-logo{
-/* width: 46%; */
-margin-top: 9%;
+  width: 50%;
+/* margin-top: 9%; */
 }
 .logo h2{
   color: #8b8b8b;
