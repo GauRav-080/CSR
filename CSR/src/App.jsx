@@ -4,9 +4,8 @@ import { ROUTES } from "./constants/Constants";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import OrderPage from "./pages/OrderPage";
-import Home from "./pages/Home"
-import Login from "./Login/Login.jsx";
-import DataTable from "./pages/DataTable";
+import Home from "./pages/Home";
+import Login from "./pages/Login.jsx";
 
 function App() {
 	const [page, setPage] = useState(ROUTES.home);
@@ -23,22 +22,19 @@ function App() {
 			case ROUTES.recentOrders:
 				return <OrderPage />;
 			default:
-				return '';
-
+				return "";
 		}
-	}
+	};
 
 	if (loggedIn) {
 		return (
 			<>
-				<Header setLoggedIn={setLoggedIn}/>
+				<Header setLoggedIn={setLoggedIn} />
 				<div className="content">
 					<SideBar setPage={setPage} />
 					<div className="page-content">
 						<Page />
-
 					</div>
-
 				</div>
 			</>
 		);
