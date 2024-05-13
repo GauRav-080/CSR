@@ -1,15 +1,5 @@
 :root {
-	font-family:  Roboto;
-	font-size: 16px;
-	line-height: 1.5;
-	font-weight: 400;
-
-	background-color: white;
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/* font-family: Roboto; */
 
 	--blue: #23aaea;
 	--green: #68b833;
@@ -25,23 +15,4 @@
 	--header-height: 50px;
 	--sidebar-width: 28vh;
 	--sidebar-max-width: 300px;
-}
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	width: 100%;
-	display: block;
-}
-
-#root {
-	height: 100vh;
-	width: 100%;
 }
