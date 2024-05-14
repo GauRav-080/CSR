@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import TimelineOppositeContent, {
 	timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
-
+import "../css/TimeLine.css";
 export default function TimeLineC({ events }) {
 	console.log(events);
 	return (
@@ -51,30 +51,6 @@ export default function TimeLineC({ events }) {
 				))}
 		</Timeline>
 
-		//   <Timeline>
-		//   {events && events.map((event, index) => (
-		//     <TimelineItem key={index}>
-		//       <TimelineSeparator>
-		//         <TimelineDot />
-		//         {index !== events.length - 1 && <TimelineConnector />}
-		//       </TimelineSeparator>
-		//       <TimelineContent>
-		//         <Typography variant="h6">{event.title}</Typography>
-		//         <Typography>{event.description}</Typography>
-		//         <Typography>{event.date}</Typography>
-		//       </TimelineContent>
-		//     </TimelineItem>
-		//   ))}
-		// </Timeline>
-
-		// <TimelineItem>
-		//   <TimelineOppositeContent color="textSecondary">
-		//     10:00 am
-		//   </TimelineOppositeContent>
-		//   <TimelineSeparator>
-		//     <TimelineDot />
-		//   </TimelineSeparator>
-		//   <TimelineContent>Code</TimelineContent>
-		// </TimelineItem>
+	
 	);
 }
