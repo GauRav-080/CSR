@@ -5,12 +5,20 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/icons-material/Menu";
+import { useTheme } from "@mui/material";
 
-const Header = ({ setLoggedIn }) => {
+const Header = ({ setLoggedIn, setNavOpen }) => {
 	//const [userName, setUserName] = useState("Nawyn Dsouza");
+	const theme = useTheme();
 
 	const handleClick = () => {
 		setLoggedIn(false);
+	};
+
+	const handleMenuClick = () => {
+		setNavOpen((n) => !n);
 	};
 
 	return (
@@ -21,10 +29,20 @@ const Header = ({ setLoggedIn }) => {
 				justifyContent: "center",
 				alignItems: "center",
 				bgcolor: "#fff",
-				px: 3,
-				zIndex: (theme) => theme.zIndex.drawer + 1,
+				px: { xs: 1, md: 3 },
+				zIndex: theme.zIndex.drawer + 1,
 			}}
 		>
+			<IconButton
+				onClick={handleMenuClick}
+				sx={{
+					display: { md: "none" },
+					color: theme.palette.primary.main,
+					mr: "auto",
+				}}
+			>
+				<Menu />
+			</IconButton>
 			<img
 				style={{
 					height: "1.875rem",
@@ -52,7 +70,13 @@ const Header = ({ setLoggedIn }) => {
 					<Avatar sx={{ width: 32, height: 32, fontSize: "0.875rem" }}>
 						ND
 					</Avatar>
-					<Typography color="#1a1a1a" fontSize="0.875rem">
+					<Typography
+						sx={{
+							display: { xs: "none", md: "block" },
+							color: "#1a1a1a",
+							fontSize: "0.875rem",
+						}}
+					>
 						Nawyn Dsouza
 					</Typography>
 				</Toolbar>

@@ -25,19 +25,25 @@ const drawerWidth = "200px";
 
 const Page = ({ setLoggedIn }) => {
 	const [page, setPage] = useState(ROUTES.home);
+	const [navOpen, setNavOpen] = useState(false);
 	return (
 		<>
-			<Header setLoggedIn={setLoggedIn} />
+			<Header setLoggedIn={setLoggedIn} setNavOpen={setNavOpen} />
 			<Box
 				sx={{
 					display: "flex",
 					overflowX: "hidden",
 				}}
 			>
-				<SideBar setPage={setPage} drawerWidth={drawerWidth} />
+				<SideBar
+					setPage={setPage}
+					drawerWidth={drawerWidth}
+					navOpen={navOpen}
+					setNavOpen={setNavOpen}
+				/>
 				<Box
 					sx={{
-						ml: drawerWidth,
+						ml: { xs: 0, md: drawerWidth },
 						width: "100%",
 						bgcolor: grey[100],
 						pb: 3,
