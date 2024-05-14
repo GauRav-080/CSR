@@ -6,7 +6,7 @@
 
 .input-section{
     background-color: rgb(255, 255, 255);
-   
+    width: max-content;
     margin: 20px 10px 25px 15px;
     padding: 15px 10px 15px 10px;
     border: 1px solid #eaeaea;
@@ -116,5 +116,5 @@ input.search {
 }
 .table-check{
     overflow: auto;
-    /* width: 100%; */
+    width: 87%;
 }

@@ -29,9 +29,9 @@ const OrderPage = () => {
 
   return (
     <div className="conatiner">
-      <div className="page-detail">
+      {/* <div className="page-detail">
         <h3>Recent Orders</h3>
-      </div>
+      </div> */}
       <div className="input-section">
         <div className="date-section">
           <div className="select-container">
