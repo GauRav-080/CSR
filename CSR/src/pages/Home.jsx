@@ -70,22 +70,23 @@ const ParagraphWithIcon = ({ icon, text }) => {
 const Home = () => {
     return (
         <div className='home-conatiner'>
-            <div className='page-detail'>
+            {/* <div className='page-detail'>
                 <h3>
                     Home
                 </h3>
-            </div>
+            </div> */}
 
             <div className='welcome-banner'>
                 <img className='profileImg' src={profileLogo} />
                 <h4>
-                    Welcome <span>Nawyn Dsouza</span>. You are Logged in as <span>Adminnistrator</span>.
+                    Welcome <span>Nawyn Dsouza</span>. You are Logged in as <span>Administrator</span>.
                 </h4>
 
             </div>
             <div className='accordin-content'>
-                {homeDetails.map((item) => {
-                    return(<><Accordion className='accordin-container'>
+                {homeDetails.map((item,index) => {
+                    
+                    return(<><Accordion   defaultExpanded={index ===0 ? true : false}  className='accordin-container'>
                         <AccordionSummary className='sss'
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1-content"

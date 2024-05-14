@@ -11,7 +11,6 @@ import TimelineOppositeContent, {
 } from "@mui/lab/TimelineOppositeContent";
 import "../css/TimeLine.css";
 export default function TimeLineC({ events }) {
-	console.log(events);
 	return (
 		<Timeline
 			sx={{
