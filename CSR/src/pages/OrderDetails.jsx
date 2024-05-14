@@ -13,6 +13,7 @@ const OrderDetails = () => {
 		padding: theme.spacing(1),
 		textAlign: "left",
 		borderRadius: 0,
+		fontWeight: 600,
 		color: theme.palette.text.secondary,
 	}));
 	const orderDetailsData = [
@@ -86,13 +87,11 @@ const OrderDetails = () => {
 	];
 
 	return (
-		<Box component="div" sx={{ overflow: "auto" }}>
-			<Box className="page-detail">
-				<h3>Search Orders</h3>
-			</Box>
+		<Box component="div" sx={{ paddingTop: "15px" }}>
 			<Heading title={"Order Details"} />
 			<Box>
 				<Paper
+					elevation={5}
 					sx={{
 						p: 2,
 						// margin: 'auto',
@@ -104,7 +103,7 @@ const OrderDetails = () => {
 							theme.palette.mode === "dark" ? "#1A2027" : "#fff",
 					}}
 				>
-					<table>
+					{/* <table>
 						<tbody>
 							{orderDetailsData.map((item, index) => {
 								console.log(item);
@@ -136,50 +135,29 @@ const OrderDetails = () => {
 								);
 							})}
 						</tbody>
-					</table>
+					</table> */}
 
-					{/* <Grid container spacing={0.1}>
+					<Grid container spacing={0.1}>
 						{orderDetailsData.map((item, index) => {
 							return (
 								<>
 									<Grid item xs={6} md={4}>
 										<Item>{item.Label}</Item>
+										{/* <Typography>{item.Label}</Typography> */}
 									</Grid>
 									<Grid item xs={6} md={8}>
-										<Item>{item.value}</Item>
+										<Item sx={{ color: "black" }}>{item.value}</Item>
 									</Grid>
 								</>
 							);
 						})}
-					</Grid> */}
+					</Grid>
 				</Paper>
 			</Box>
-			<Box
-				sx={{
-					color: "success.dark",
-
-					fontWeight: "bold",
-					ml: 0.9,
-					mr: 3,
-					fontSize: 14,
-					backgroundColor: "#2a58ad",
-				}}
-			>
-				<Typography
-					sx={{
-						color: "white",
-						display: "inline",
-						fontWeight: "bold",
-						mx: 0.9,
-						fontSize: 14,
-					}}
-					variant="button"
-					display="block"
-				>
-					Order Process Steps
-				</Typography>
-			</Box>
+			<Heading title={"Order Process Steps"} />
+			
 			<Paper
+				elevation={5}
 				sx={{
 					p: 2,
 					// margin: 'auto',
@@ -193,70 +171,84 @@ const OrderDetails = () => {
 			>
 				<Box
 					sx={{
-						fontWeight: "bold",
-						ml: 1.5,
-
-						fontSize: 16,
+						marginBottom: "-20px",
 					}}
 				>
-					<Typography
+					<Box
 						sx={{
-							display: "inline",
 							fontWeight: "bold",
-							mx: 0.9,
-							fontSize: 14,
+							ml: 1.5,
+
+							fontSize: 16,
 						}}
-						variant="button"
-						display="block"
 					>
-						OPS_ORDER_RECEIVED
-					</Typography>
+						<Typography
+							sx={{
+								display: "inline",
+								fontWeight: "bold",
+								mx: 0.9,
+								fontSize: 14,
+							}}
+							variant="button"
+							display="block"
+						>
+							OPS_ORDER_RECEIVED
+						</Typography>
+					</Box>
+					<TimeLineC events={orderReceivedTimeline} />
 				</Box>
-				<TimeLineC events={orderReceivedTimeline} />
+				<Box sx={{ marginBottom: "-20px" }}>
+					<Box
+						sx={{
+							fontWeight: "bold",
+							ml: 1.5,
+
+							fontSize: 16,
+						}}
+					>
+						<Typography
+							sx={{
+								display: "inline",
+								fontWeight: "bold",
+								mx: 0.9,
+								fontSize: 14,
+							}}
+							variant="button"
+							display="block"
+						>
+							OPS_ORDER_DATA_VALIDATED
+						</Typography>
+					</Box>
+					<TimeLineC events={orderDataValidateTimeline} />
+				</Box>
 				<Box
 					sx={{
-						fontWeight: "bold",
-						ml: 1.5,
-
-						fontSize: 16,
+						marginBottom: "-20px",
 					}}
 				>
-					<Typography
+					<Box
 						sx={{
-							display: "inline",
 							fontWeight: "bold",
-							mx: 0.9,
-							fontSize: 14,
-						}}
-						variant="button"
-						display="block"
-					>
-						OPS_ORDER_DATA_VALIDATED
-					</Typography>
-				</Box>
-				<TimeLineC events={orderDataValidateTimeline} />
-				<Box
-					sx={{
-						fontWeight: "bold",
-						ml: 1.5,
+							ml: 1.5,
 
-						fontSize: 16,
-					}}
-				>
-					<Typography
-						sx={{
-							display: "inline",
-							fontWeight: "bold",
-							mx: 0.9,
-							fontSize: 14,
+							fontSize: 16,
 						}}
-						variant="button"
-						display="block"
 					>
-						OPS_ORDER_SUBMITTED
-					</Typography>
+						<Typography
+							sx={{
+								display: "inline",
+								fontWeight: "bold",
+								mx: 0.9,
+								fontSize: 14,
+							}}
+							variant="button"
+							display="block"
+						>
+							OPS_ORDER_SUBMITTED
+						</Typography>
+					</Box>
+					<TimeLineC events={orderSubmittedTimeline} />
 				</Box>
-				<TimeLineC events={orderSubmittedTimeline} />
 			</Paper>
 			<Box className="page-detail">
 				<h3>Status Notification</h3>
@@ -267,6 +259,23 @@ const OrderDetails = () => {
 				<h3>Comments</h3>
 			</Box>
 			<Heading title={"Message"} />
+			<Paper
+				elevation={5}
+				sx={{
+					p: 2,
+					// margin: 'auto',
+					ml: 1,
+					mr: 3,
+					mb: 3,
+					flexGrow: 1,
+					backgroundColor: (theme) =>
+						theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+				}}
+			>
+				<Typography>
+					Currently no Order Comment exists for selected order
+				</Typography>
+			</Paper>
 		</Box>
 	);
 };
