@@ -111,14 +111,23 @@ const OrderDetails = () => {
 								return (
 									<>
 										<tr>
-											<th align="left" style={{ fontSize:'14px' , 
-                      // borderBottom:"1px solid black"
-                      }}>{item.Label}:</th>
+											<th
+												align="left"
+												style={{
+													fontSize: "14px",
+													// borderBottom:"1px solid black"
+												}}
+											>
+												{item.Label}:
+											</th>
 											<td
 												align="left"
-												style={{ paddingLeft: "5%", width: "80%",fontSize:'14px' ,
-                        // borderBottom:"1px solid black"
-                      }}
+												style={{
+													paddingLeft: "5%",
+													width: "80%",
+													fontSize: "14px",
+													// borderBottom:"1px solid black"
+												}}
 											>
 												{item.value}
 											</td>

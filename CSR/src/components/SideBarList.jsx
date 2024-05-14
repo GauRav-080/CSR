@@ -1,122 +1,70 @@
 import React from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import AssignmentOutlined from "@mui/icons-material/AssignmentOutlined";
+import ReceiptLongOutlined from "@mui/icons-material/ReceiptLongOutlined";
 import {
-	Divider,
 	ListItem,
 	ListItemButton,
 	ListItemIcon,
 	ListItemText,
+	useTheme,
 } from "@mui/material";
-import HubIcon from '@mui/icons-material/Hub';
-import {
-	AssignmentOutlined,
-	BuildOutlined,
-	CategoryOutlined,
-	DescriptionOutlined,
-	ManageAccountsOutlined,
-	NotificationsOutlined,
-	ReceiptLongOutlined,
-} from "@mui/icons-material";
-import ListSubheader from '@mui/material/ListSubheader';
-import List from '@mui/material/List';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
+
 import { ROUTES } from "../constants/Constants";
+
 const sideList = [
 	{
 		name: "Home",
 		icon: <HomeOutlinedIcon />,
 		page: ROUTES.home,
 	},
+
 	{
-		name: "Notifications",
-		icon: <NotificationsOutlined />,
-	},
-	{
-		name: "Orders",
+		name: "DNP Orders",
 		icon: <AssignmentOutlined />,
-		subList: true,
+		page: ROUTES.dnpOrders,
 	},
 	{
-		name: "Service Management",
-		icon: <ManageAccountsOutlined />,
-	},
-	{
-		name: "Products",
-		icon: <CategoryOutlined />,
-	},
-	{
-		name: "Distributions",
-		icon: <HubIcon />,
-	},
-	{
-		name: "Transactions",
+		name: "Order Details",
 		icon: <ReceiptLongOutlined />,
-	},
-	{
-		name: "SDS",
-		icon: <DescriptionOutlined />,
-	},
-	{
-		name: "Admin Tools",
-		icon: <BuildOutlined />,
+		page: ROUTES.orderDetails,
 	},
 ];
-const SubList = ({ open, setPage }) => {
-	const handleClick = (page = '') => {
-		setPage(page);
-	};
-	return (
-		<Collapse in={open} timeout="auto" unmountOnExit>
-			<List className="sub-list" component="div" disablePadding>
-				<ListItemButton sx={{ pl: 4 }} onClick={(e) => handleClick(ROUTES.recentOrders)}>
-					<ListItemText primary="Recent Orders" />
-				</ListItemButton>
-				<ListItemButton sx={{ pl: 4 }}>
 
-					<ListItemText primary="On Waits Orders" />
-				</ListItemButton>
-				<ListItemButton sx={{ pl: 4 }}>
-
-					<ListItemText primary="Failed Orders" />
-				</ListItemButton>
-				<ListItemButton sx={{ pl: 4 }}>
-
-					<ListItemText primary="In Process Orders" />
-				</ListItemButton>
-				<ListItemButton sx={{ pl: 4 }}>
-
-					<ListItemText primary="Search Orders" />
-				</ListItemButton>
-			</List>
-		</Collapse>
-	);
-}
 const SideBarList = ({ setPage }) => {
-	const [open, setOpen] = React.useState(false);
+	const [selectedIndex, setSelectedIndex] = React.useState(0);
+	const theme = useTheme();
 
-	const handleClick = (page = '') => {
+	const handleClick = (page, index) => {
+		setSelectedIndex(index);
 		setPage(page);
 	};
 
-	const handleDropdown = () => {
-		setOpen(!open);
-	}
 	return sideList.map((item, index) => (
-		<>
-			<ListItemButton onClick={item.subList ? handleDropdown : ((e) => handleClick(item.page))}>
+		<ListItem
+			disableGutters
+			disablePadding
+			key={"li-" + item.name}
+			sx={{
+				color: "#fff",
+				"& .MuiListItemIcon-root": {
+					color: "#fff",
+					minWidth: "40px",
+				},
+				"& .MuiListItemButton-root.Mui-selected, & .MuiListItemButton-root.Mui-selected:hover":
+					{
+						bgcolor: theme.palette.primary.main,
+					},
+			}}
+		>
+			<ListItemButton
+				selected={selectedIndex === index}
+				onClick={(e) => handleClick(item.page, index)}
+			>
 				<ListItemIcon>{item.icon}</ListItemIcon>
 				<ListItemText primary={item.name} />
-				{item.subList && (open && item.subList ? <ExpandLess /> : <ExpandMore />)}
-
 			</ListItemButton>
-			{item.subList && <SubList open={open} setPage={setPage} />}
-		</>
+		</ListItem>
 	));
 };
 

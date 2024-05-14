@@ -1,21 +1,33 @@
 import React from "react";
-import "./SideBar.css";
-import {
-	List,
-	ListItemButton,
-	ListItemIcon,
-	ListItemText,
-} from "@mui/material";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
 import SideBarList from "../components/SideBarList";
 
-const SideBar = ({setPage}) => {
+const SideBar = ({ setPage, drawerWidth }) => {
 	return (
-		<div className="sidebar">
-			<List component="nav">
+		<Drawer
+			variant="permanent"
+			sx={{
+				flexShrink: 0,
+				width: drawerWidth,
+				overflow: "hidden",
+				position: "fixed",
+				bgcolor: "#2a58ad",
+				minHeight: `calc(100vh - 70px)`,
+
+				"& .MuiDrawer-paper": {
+					height: "max-content",
+					width: drawerWidth,
+					bgcolor: "#2a58ad",
+					position: "absolute",
+					border: "none",
+				},
+			}}
+		>
+			<List disablePadding>
 				<SideBarList setPage={setPage} />
 			</List>
-		</div>
+		</Drawer>
 	);
 };
 
