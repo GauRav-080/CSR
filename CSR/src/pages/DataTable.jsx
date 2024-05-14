@@ -3,6 +3,9 @@ import {
     MaterialReactTable,
     useMaterialReactTable,
 } from 'material-react-table';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import { red } from '@mui/material/colors';
 
 //nested data is ok, see accessorKeys in ColumnDef below
 const data = [
@@ -13,7 +16,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM jrnl",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "12\/29\/2023 03:19",
@@ -22,7 +29,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DNP Book w\/o flg v12-29.1",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 05:15",
@@ -31,7 +41,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DNP Book wtoutflg",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 05:42",
@@ -40,7 +53,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "jrnl 29 Dec",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 06:06",
@@ -49,7 +65,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "jrnl 29 Dec 1",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 06:20",
@@ -58,7 +77,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "jrnl 29 Ver 1",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 06:38",
@@ -67,7 +89,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 06:48",
@@ -76,7 +101,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "12\/29\/2023 07:13",
@@ -85,7 +113,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/02\/2024 08:13",
@@ -94,7 +125,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/02\/2024 08:19",
@@ -103,7 +137,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/02\/2024 08:43",
@@ -112,7 +149,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/03\/2024 04:05",
@@ -121,7 +161,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/03\/2024 04:29",
@@ -130,7 +173,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/03\/2024 04:39",
@@ -139,7 +185,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "jrnl 29 Dec 1",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/04\/2024 02:12",
@@ -148,7 +197,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/04\/2024 02:41",
@@ -157,7 +209,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK book",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/04\/2024 04:57",
@@ -166,7 +221,10 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK Fresh",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
     },
     {
      "DATE_ADDED": "01\/04\/2024 05:28",
@@ -175,7 +233,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK DNP Jrnl",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 05:28",
@@ -184,7 +246,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Devs book",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 05:34",
@@ -193,7 +259,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 05:52",
@@ -202,7 +272,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "NDJ2024",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 05:59",
@@ -211,7 +285,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Devs book",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 06:06",
@@ -220,7 +298,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "test jrnl 22",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 06:16",
@@ -229,7 +311,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "04-Jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 06:29",
@@ -238,7 +324,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 07:29",
@@ -247,7 +337,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 07:32",
@@ -256,7 +350,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 07:40",
@@ -265,7 +363,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK book qtychk",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 07:41",
@@ -274,7 +376,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:09",
@@ -283,7 +389,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK 4 Jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:15",
@@ -292,7 +402,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK 4 Jan1",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:16",
@@ -301,7 +415,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK book SSD-5329 tst",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:16",
@@ -310,7 +428,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK Jrnl SSD-5329 tst",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:19",
@@ -319,7 +441,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK Jrnl SSD-5329 tst",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:19",
@@ -328,7 +454,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 08:23",
@@ -337,7 +467,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 09:28",
@@ -346,7 +480,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 09:33",
@@ -355,7 +493,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_JRNL 4 Jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 09:50",
@@ -364,7 +506,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 09:52",
@@ -373,7 +519,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Portal book",
      "ORDER_STATUS": "COMPLETED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 09:57",
@@ -382,7 +532,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_BOOK 4 Jan1",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 10:19",
@@ -391,7 +545,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_JRNL 4 Jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 10:24",
@@ -400,7 +558,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Portal Jrnl",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 10:24",
@@ -409,7 +571,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Portal Jrnl",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "COMPLETED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/04\/2024 13:18",
@@ -418,7 +584,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MKW-Test-DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 03:40",
@@ -427,7 +597,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK Jrnl SSD-5403 tst",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 04:26",
@@ -436,7 +610,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK book SSD-5403 tst",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 04:31",
@@ -445,7 +623,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 04:56",
@@ -454,7 +636,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK book forwarderadd",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:11",
@@ -463,7 +649,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:13",
@@ -472,7 +662,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK book Bill address",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:36",
@@ -481,7 +675,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "RN2_DNP",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:47",
@@ -490,7 +688,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK Jrnl DNP 5403",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:51",
@@ -499,7 +701,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "staging portal order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:51",
@@ -508,7 +714,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "staging portal order",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 05:55",
@@ -517,7 +727,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "VK DNP Book 5403",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 06:02",
@@ -526,7 +740,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_JRNL 5 Jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/05\/2024 06:02",
@@ -535,7 +753,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DM_JRNL 5 Jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:08",
@@ -544,7 +766,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:08",
@@ -553,7 +779,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:08",
@@ -562,7 +792,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:08",
@@ -571,7 +805,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:08",
@@ -580,7 +818,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:45",
@@ -589,7 +831,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:45",
@@ -598,7 +844,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:59",
@@ -607,7 +857,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 11:59",
@@ -616,7 +870,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 12:01",
@@ -625,7 +883,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 12:38",
@@ -634,7 +896,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl 10jan",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 14:03",
@@ -643,7 +909,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MKW-csv-test",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 19:40",
@@ -652,7 +922,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "TEST-0110241939-UK",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/10\/2024 19:44",
@@ -660,7 +934,11 @@ const data = [
      "SGGS_PUBLISHER_ACRONYM": "UAT-SPABooks",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 01:49",
@@ -669,7 +947,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": 123456,
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 02:23",
@@ -678,7 +960,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DNP MAX",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 03:02",
@@ -687,7 +973,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DNP MAX",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 03:09",
@@ -696,7 +986,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "DNP MAX",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 06:38",
@@ -705,7 +999,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl ziggy",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 07:39",
@@ -714,7 +1012,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl ziggy",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 07:50",
@@ -723,7 +1025,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "TEST-0110241951-UK",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 06:16",
@@ -732,7 +1038,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MultiItems Jrnl ziggy",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 02:53",
@@ -741,7 +1051,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": 123456,
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 07:53",
@@ -750,7 +1064,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "TEST-0110241951-UK",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 07:57",
@@ -759,7 +1077,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 08:10",
@@ -768,7 +1090,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 08:28",
@@ -777,7 +1103,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 08:36",
@@ -786,7 +1116,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 09:47",
@@ -795,7 +1129,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Jrnl CSV 5414",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "ONHOLD",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 10:03",
@@ -804,7 +1142,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "Book CSV 5414",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 10:35",
@@ -813,7 +1155,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MKW-csv-test2",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 10:35",
@@ -822,7 +1168,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "MKW-csv-test2",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 16:24",
@@ -831,7 +1181,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "639702T4",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 16:44",
@@ -840,7 +1194,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "639702T7",
      "ORDER_STATUS": "CANCELED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/11\/2024 17:02",
@@ -849,7 +1207,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "639702T9-GERMANY",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/12\/2024 02:22",
@@ -858,7 +1220,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "ziggy test",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "INPROCESS",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/12\/2024 04:18",
@@ -867,7 +1233,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "CSV test RN",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/12\/2024 04:19",
@@ -876,7 +1246,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "CSV test RN",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/12\/2024 06:12",
@@ -885,7 +1259,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "test RN -5427",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/12\/2024 06:12",
@@ -894,7 +1272,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "test RN -5427",
      "ORDER_STATUS": "FAILED",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI UK"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI UK",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     },
     {
      "DATE_ADDED": "01\/12\/2024 17:11",
@@ -903,7 +1285,11 @@ const data = [
      "PURCHASE_ORDER_NUMBER": "639703T5-GERMANY",
      "ORDER_STATUS": "INPROCESS",
      "DNP_ORDER_STATUS": "FAILED",
-     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)"
+     "DNP_PRODUCTION_PLANT_NAME": "CPI DE (Germany)",
+     "Title_Handshake":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     "Order_Acknowledgement":<CancelOutlinedIcon sx={{color: red[700], width: 120, fontSize:25  }} />,
+     "Order_Shipped":<TaskAltIcon color="success"  sx={{ width: 120 }} />,
+     
     }
    ];
 
@@ -947,17 +1333,17 @@ const DataTable = () => {
                 size: 150,
             },
             {
-                accessorKey: 'DNP_PRODUCTION_PLANT_NAME',
+                accessorKey: 'Title_Handshake',
                 header: 'Title Handshake',
                 size: 150,
             },
             {
-                accessorKey: 'DNP_PRODUCTION_PLANT_NAME',
+                accessorKey: 'Order_Acknowledgement',
                 header: 'Order Acknowledgement',
                 size: 150,
             },
             {
-                accessorKey: 'DNP_PRODUCTION_PLANT_NAME',
+                accessorKey: 'Order_Shipped',
                 header: 'Order Shipped',
                 size: 150,
             },

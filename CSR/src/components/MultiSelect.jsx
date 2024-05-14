@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormControl, InputLabel, ListItemText, MenuItem, Select } from '@mui/material'
+import { FormControl, InputLabel, ListItemText, MenuItem, OutlinedInput, Select } from '@mui/material'
 import { CheckBox } from '@mui/icons-material';
 
 
@@ -11,7 +11,7 @@ const names = [
   "Failed",
 ];
 
-const MultiSelect = ({ value, onChange}) => {
+const MultiSelect = ({ value, onChange,label}) => {
     return (
         <>
          <FormControl  sx={{ width: 320 }}>
@@ -21,6 +21,7 @@ const MultiSelect = ({ value, onChange}) => {
           multiple
           value={value}
           onChange={onChange}
+          label={label}
           renderValue={(selected) => selected.join(', ')}
         >
           {names.map((name) => (
