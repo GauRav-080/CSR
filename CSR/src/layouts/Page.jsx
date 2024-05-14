@@ -40,6 +40,7 @@ const Page = ({ setLoggedIn }) => {
 						ml: drawerWidth,
 						width: "100%",
 						bgcolor: grey[100],
+						pb: 3,
 					}}
 				>
 					<Content page={page} />
