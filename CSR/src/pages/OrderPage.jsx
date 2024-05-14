@@ -35,46 +35,52 @@ const OrderPage = () => {
       <div className="input-section">
         <div className="date-section">
           <div className="select-container">
-            <label>From</label>
+            {/* <label>From</label> */}
              <DatePickers
-            //  label="From Date"
+             label="From Date"
              value={fromDate}
              onChange={(date) => setFromDate(date)}
              renderInput={(props) => <TextField {...props} />}/>
           </div>
           <div className="select-container">
-            <label>To</label>
+            {/* <label>To</label> */}
             <DatePickers 
-            // label="To Date"
+            label="To Date"
             value={toDate}
             onChange={(date) => setToDate(date)}
             renderInput={(props) => <TextField {...props} />}/>
           </div>
           <div className="select-container">
-            <label>CSR Status</label>
-             <MultiSelect
+            {/* <label>CSR Status</label> */}
+            <MultiSelect
+            label="CSR Status" 
              value={CSRStatus}
              onChange={(event) => setCSRStatus(event.target.value)}
               />
              
           </div>
           <div className="select-container">
-            <label>DNP OrderStatus</label>
+            {/* <label>DNP OrderStatus</label> */}
             <MultiSelect
              value={DNPOrderStatus}
              onChange={(event) =>  setDNPOrderStatus(event.target.value)}
               />
              
           </div>
+
+          <div className="select-container"><Button variant="contained" onClick={handleSearch}>Search</Button></div>
+          
         </div>
 
         <div className="lower-input">
-        <Button variant="contained" onClick={handleSearch}>Search</Button>
+        {/* <Button variant="contained" onClick={handleSearch}>Search</Button> */}
         </div>
       </div>
       <hr className="horizontal-line"></hr>
-      <div></div>
+      <div className="table-check">
       <DataTable />
+      </div>
+      
     </div>
   );
 };

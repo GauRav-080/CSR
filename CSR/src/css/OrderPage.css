@@ -114,3 +114,7 @@ input.search {
 .MuiInputBase-root-MuiOutlinedInput-root{
     margin:8px;
 }
+.table-check{
+    overflow: auto;
+    /* width: 100%; */
+}
