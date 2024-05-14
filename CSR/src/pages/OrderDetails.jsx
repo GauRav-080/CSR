@@ -137,7 +137,7 @@ const OrderDetails = () => {
 						</tbody>
 					</table> */}
 
-					<Grid container spacing={0.1}>
+					<Grid container spacing={0.2}>
 						{orderDetailsData.map((item, index) => {
 							return (
 								<>
