@@ -46,7 +46,6 @@ const SideBarList = ({ setPage }) => {
 			disablePadding
 			key={"li-" + item.name}
 			sx={{
-				color: "#fff",
 				"& .MuiListItemIcon-root": {
 					color: "#fff",
 					minWidth: "40px",
@@ -62,7 +61,10 @@ const SideBarList = ({ setPage }) => {
 				onClick={(e) => handleClick(item.page, index)}
 			>
 				<ListItemIcon>{item.icon}</ListItemIcon>
-				<ListItemText primary={item.name} />
+				<ListItemText
+					primary={item.name}
+					sx={{ fontWeight: "medium", color: "#fff" }}
+				/>
 			</ListItemButton>
 		</ListItem>
 	));
