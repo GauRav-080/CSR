@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     width:-webkit-fill-available;
+    margin:5px;
     
 }
 
@@ -108,4 +109,8 @@ input.search {
 .MuiTableHead-root .MuiTableCell-root{
     background-color: #e4e9ed;
   
+}
+
+.MuiInputBase-root-MuiOutlinedInput-root{
+    margin:8px;
 }
