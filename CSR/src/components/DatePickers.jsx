@@ -20,13 +20,13 @@ const DatePickers = ({ label,value, onChange, renderInput}) => {
                             borderColor: '#2196f3',
                             border: '1px solid',
                             backgroundColor: "red",
-                            margin:'8px',
+                            // margin:'8px',
                         }
                     }}
                     //  className='date-input'
                     slotProps={{
                         textField: {
-                            helperText: 'MM/DD/YYYY',
+                            // helperText: 'MM/DD/YYYY',
                             placeholder: "Choose Date"
                         },
                     }} />
