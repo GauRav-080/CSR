@@ -53,7 +53,7 @@ const OrderPage = () => {
           <div className="select-container">
             {/* <label>CSR Status</label> */}
             <MultiSelect
-            label="CSR Status" 
+             label="CSR Status" 
              value={CSRStatus}
              onChange={(event) => setCSRStatus(event.target.value)}
               />
@@ -62,6 +62,7 @@ const OrderPage = () => {
           <div className="select-container">
             {/* <label>DNP OrderStatus</label> */}
             <MultiSelect
+             label="DNP Order Status"
              value={DNPOrderStatus}
              onChange={(event) =>  setDNPOrderStatus(event.target.value)}
               />
