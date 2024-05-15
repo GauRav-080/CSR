@@ -107,7 +107,9 @@ input.search {
 }
 
 .MuiTableHead-root .MuiTableCell-root{
-    background-color: #e4e9ed;
+    /* background-color:#23aaea; */
+    /* background-color:#68b833; */
+    color: #23aaea;
   
 }
 
